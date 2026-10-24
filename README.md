@@ -1,20 +1,17 @@
 # minecraft_bedrock_server
 Docker image for a Minecraft Bedrock Edition server.
 
-# How to build the image and push to Docker Hub:
+# How to build the image:
 ```
 docker buildx build --platform linux/amd64,linux/arm64 -t projectscache/minecraft_bedrock_server .
 ```
 
-```
-docker push projectscache/minecraft_bedrock_server
-```
-
-# How to pull the image and start the server:
+# How to pull the image:
 ```
 docker pull projectscache/minecraft_bedrock_server
 ```
 
+# How to start the server:
 ```
 docker run -d -p 19132:19132/udp --name minecraft_bedrock_server projectscache/minecraft_bedrock_server:latest
 ```
